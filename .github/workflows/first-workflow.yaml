@@ -9,22 +9,28 @@ jobs:
         run: echo "Hello World"
       - name: Multiline Command
         run: |
-          python3 --version
           node -v
           npm -v
+          python3 --version
 
   parallel-job-macos:
     runs-on: macos-latest
     steps:
       - name: View SW Version
         run: sw_vers
-
+      - name: Multiline Command
+        run: |
+          node -v
+          npm -v
+          python3 --version
   dependant-job:
     runs-on: windows-latest
     needs: [run-shell-commands]
     steps:
       - name: echo a string
         run: Write-Output "Windows String"
-      - name: Error Step
-        run: doesnotexists
-
+      - name: Multiline Command
+        run: |
+          node -v
+          npm -v
+          python3 --version
