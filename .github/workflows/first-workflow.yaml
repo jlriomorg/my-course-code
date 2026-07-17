@@ -29,7 +29,6 @@ jobs:
           gh --version
 
   dependant-job:
-
     runs-on: ${{vars.W_RUNNER}}
     needs: [run-shell-commands]
     steps:
