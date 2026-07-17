@@ -1,9 +1,9 @@
 name: Working Dirs & Shells
 on: [push]
 
-# defaults:
-#  run:
-#    shell: bash
+defaults:
+ run:
+   shell: bash
 
 jobs:
   display-wd-info:
@@ -17,13 +17,25 @@ jobs:
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
 
-  display-wd-info-windows:
+
+  display-wd-info-w:
     runs-on: windows-latest
     steps:
       - name: Display Working Directory & list Files
         run: |
-          Get-Location
-          dir
-          echo $env:GITHUB_SHA
-          echo $env:$GITHUB_REPOSITORY
-          echo $env:$GITHUB_WORKSPACE          
+          pwd
+          ls -a
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+
+  # display-wd-info-windows:
+  #   runs-on: windows-latest
+  #   steps:
+  #     - name: Display Working Directory & list Files
+  #       run: |
+  #         Get-Location
+  #         dir
+  #         echo $env:GITHUB_SHA
+  #         echo $env:$GITHUB_REPOSITORY
+  #         echo $env:$GITHUB_WORKSPACE          
