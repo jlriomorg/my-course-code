@@ -42,9 +42,9 @@ jobs:
         run: |
           Get-Location
           dir
-          echo sha - ${env:$GITHUB_SHA}
-          echo repo - ${env:$GITHUB_REPOSITORY}
-          echo wspace - ${env:$GITHUB_WORKSPACE}          
+          echo sha ${env:$GITHUB_SHA}
+          echo repo ${env:$GITHUB_REPOSITORY}
+          echo wspace ${env:$GITHUB_WORKSPACE}          
       - name: Python Shell
         shell: python
         run: |
