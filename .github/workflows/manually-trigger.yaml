@@ -33,7 +33,6 @@ on:
       environment:
         description: "Environment"
         type: environment
-        required: true
 jobs:
     log-info:
       runs-on: ubuntu-latest
