@@ -7,6 +7,33 @@ on:
         type: string
         required: true
         default: "Default value"
+      string2:
+        description: A string input
+        type: string
+        required: true
+        default: "Default value"
+      my-number:
+        description: number input
+        type: number
+        required: true
+        default: 2
+      option1:
+        description: options
+        type: choice
+        required: true
+        default: OPT2
+        options:
+          - OPT1
+          - OPT2
+          - OPT3
+      boolean1:
+        description: boolean type
+        required: false
+        type: boolean
+      environment:
+        description: "Environment"
+        type: environment
+        required: true
 jobs:
     log-info:
       runs-on: ubuntu-latest
